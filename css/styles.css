@@ -194,7 +194,7 @@ footer span {
 }
 @media (max-width: 500px) {
   #menu .menu-section:first-of-type {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 }
 #menu .menu-section h2 {
@@ -215,6 +215,13 @@ footer span {
   display: inline-block;
   pointer-events: none;
 }
+@media (max-width: 500px) {
+  #menu .menu-section a {
+    margin: 0 0 16px 8px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 #menu .menu-section a:hover:before, #menu .menu-section a:focus:before {
   height: 60%;
 }
@@ -228,6 +235,11 @@ footer span {
   height: 8px;
   z-index: -1;
   opacity: 30%;
+}
+@media (max-width: 500px) {
+  #menu .menu-section a:before {
+    height: 4px;
+  }
 }
 
 #close-menu {
@@ -573,6 +585,8 @@ nav #menu-toggle span.bottom {
   .three-screens {
     overflow: auto;
     white-space: nowrap;
+    margin: 0 -24px;
+    padding: 0 0 0 24px;
   }
 }
 .three-screens img {
@@ -586,6 +600,11 @@ nav #menu-toggle span.bottom {
 }
 .three-screens img:nth-child(2) {
   margin: 0 24px;
+}
+@media (max-width: 800px) {
+  .three-screens img:nth-child(3) {
+    padding: 0 24px 0 0;
+  }
 }
 
 .user-types {
@@ -673,4 +692,14 @@ nav #menu-toggle span.bottom {
 
 #next-project #featured-work h2 {
   margin-bottom: 80px;
+}
+
+iframe.prototype {
+  width: 100%;
+  height: 50vw;
+}
+@media (max-width: 800px) {
+  iframe.prototype {
+    display: none;
+  }
 }
