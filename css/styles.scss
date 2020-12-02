@@ -173,7 +173,7 @@ footer{
   flex-direction: column;
   padding-left: 72px;
   z-index: 2;
-  top: -100%;
+  top: -130%;
   transition: $transition;
   @media (max-width: 800px) {
     padding-left: 24px;
@@ -685,7 +685,7 @@ nav {
 }
 
 .desktop-slider{
-  margin-top: 32px;
+  margin: 32px -24px 0;
 
   .slide{
     width: 1440px;

@@ -165,7 +165,7 @@ footer span {
   flex-direction: column;
   padding-left: 72px;
   z-index: 2;
-  top: -100%;
+  top: -130%;
   transition: all 350ms cubic-bezier(0.475, 0.425, 0, 0.995);
 }
 @media (max-width: 800px) {
@@ -651,7 +651,7 @@ nav #menu-toggle span.bottom {
 }
 
 .desktop-slider {
-  margin-top: 32px;
+  margin: 32px -24px 0;
 }
 .desktop-slider .slide {
   width: 1440px;
