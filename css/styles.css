@@ -192,8 +192,19 @@ footer span {
 #menu .menu-section:first-of-type {
   margin-bottom: 80px;
 }
+@media (max-width: 500px) {
+  #menu .menu-section:first-of-type {
+    margin-bottom: 64px;
+  }
+}
 #menu .menu-section h2 {
   margin-bottom: 24px;
+}
+@media (max-width: 500px) {
+  #menu .menu-section h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
 }
 #menu .menu-section a {
   font-size: 24px;
@@ -566,6 +577,7 @@ nav #menu-toggle span.bottom {
 }
 .three-screens img {
   width: calc(33.33% - 16px);
+  height: 100%;
 }
 @media (max-width: 800px) {
   .three-screens img {

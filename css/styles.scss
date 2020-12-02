@@ -200,10 +200,19 @@ footer{
 
     &:first-of-type{
       margin-bottom: 80px;
+
+      @media (max-width: 500px) {
+        margin-bottom: 64px;
+      }
     }
 
     h2{
       margin-bottom: 24px;
+
+      @media (max-width: 500px) {
+        font-size: 34px;
+        line-height: 40px;
+      }
     }
 
     a{
@@ -582,7 +591,6 @@ nav {
     
     @media (max-width: 500px) {
       margin-right: 32px;
-      // margin-top: 40px;
     }
   }
 }
@@ -606,6 +614,7 @@ nav {
   
   img{
     width: calc(33.33% - 16px);
+    height: 100%;
 
     @media (max-width: 800px) {
       width: 60vw;
