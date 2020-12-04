@@ -1,0 +1,117 @@
+doctype html
+html(lang="en")
+  head
+    title MX Client Portal - Brian Clay
+    meta(name='description' content='Welcome to my product design and web development portfolio')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(property='og:title' content='Home - Brian Clay')
+    meta(property='og:site_name' content='Home - Brian Clay')
+    meta(property='og:url' content='https://clayux.com')
+    meta(property='og:description' content='')
+    meta(property='og:type' content='business.business')
+    meta(property='og:image' content='/assets/og-image.png')
+    link(href='/assets/favicon.png' rel='icon')
+    link(rel='preconnect', href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;800&display=swap', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    link(href='../css/reset.css' rel='stylesheet')
+    link(href='../css/helpers.css' rel='stylesheet')
+    link(href='../css/styles.css' rel='stylesheet')
+  body
+    .page-wrapper.work-wrapper
+      #work-banner
+        include ../shared/nav.pug
+        h1 MX Client Portal
+        span.sub-text Web & iOS
+        img.banner-img(alt="banner image" src="/assets/client-portal/desktop/banner.png")
+      .work-details
+        .detail
+          p Role
+          h3 Lead Designer
+        .detail
+          p Timeline
+          h3 Ongoing
+      .two-col-summary
+        p.work-summary The MX client portal provides customers a way to manage their integration with MX. It lightens the load on our support staff by empowering clients to troubleshoot and problem solve on their own. I helped bring this product to market. I currently maintain the design and roadmap for the client portal.
+        p.work-summary I have designed and researched every feature in the client portal. I've decided to highlight just a few for this case study. 
+      img.desktop-img(alt="mx client portal example screen 1" src="/assets/client-portal/desktop/example01.png")
+      .user-types
+        h2 User Types
+        .user
+          h3 Bank Employees
+          p MX primarily banks and credit unions of all sizes. Some have thousands of staff members others have less than 50. The client portal primarily serves developers and support staff
+        .user
+          h3 Fintech Employees
+          p Fintechs are even more varied than banks. They do everything from loan origination to personal finance management. Fintechs are typically smaller than banks and often we work directly with the business founders. 
+      img.desktop-img(alt="mx client portal example screen" src="/assets/client-portal/desktop/example02.png")
+      .text-block
+        h2 Aggregation metrics
+        p MX's most popular service is bank data aggregation. This allows apps to pull financial data into their applications. This is a very tricky thing to do and is prone to failure. 
+        br
+        p MX's clients asked for a way to see meaningful metics around their aggregation service. This helps them understand where failures are occuring and better aid their customers that are stuggling.
+      .slide-controls
+        svg.desktop-prev(width='38', height='29', viewbox='0 0 38 29', fill='none', xmlns='http://www.w3.org/2000/svg')
+          path(d='M38 14.5L2 14.5M2 14.5L15 27.5M2 14.5L15 1.5', stroke='black', stroke-width='2')
+        svg.desktop-next(width='38', height='29', viewbox='0 0 38 29', fill='none', xmlns='http://www.w3.org/2000/svg')
+          path(d='M0 14.5H36M36 14.5L23 1.5M36 14.5L23 27.5', stroke='black', stroke-width='2')
+      .desktop-slider
+        .slide
+          img(alt="admin portal example 1" src="/assets/client-portal/desktop/slider02.png")
+        .slide
+          img(alt="admin portal example 2" src="/assets/client-portal/desktop/slider01.png")
+      .process-wrapper
+        h3 Process
+        p Getting the agg metrics feature to where it is today has taken constant collaboration with users, development, and product.
+        .process-graphic
+          .point
+            h4 Card sort
+            p We gathered about 20 clients to see what their biggest pain points were. By far agg. metrics was number 1.
+          .point
+            h4 Discovery
+            p We knew agg. metrics was something that we needed to help with but we didn't know exactly what our users wanted. Over several weeks I worked with a few clients to come up with some ideas and create designs.
+          .point
+            h4 Develop v1
+            p After discussing with clients and developers we built out a v1. It was terrible. Even though we had great feedback during the initial design phase we quickly learned that what we came up with wasn't working. 
+          .point
+            h4 Research and re-design
+            p Based on feedback from clients and MX's own customer service team we worked on new designs for agg. metrics. The updated design exposes more data, provides helpful error states, and allows for fine grained filtering. Feedback on the updated design has been very positive. 
+      .text-block
+        h2 User lookup
+        p User lookup is a feature that allows MX's clients to better support their customers. It allows MX's clients to look up a specific customer and view all their interactions with the MX platform. This is critical to provide support to customers that are having issues.
+      img.desktop-img(alt="mx client portal example screen 1" src="/assets/client-portal/desktop/example03.png")
+      .process-wrapper
+        h3 Process
+        p User lookup has been the most well received feature I have worked on. Clients were involved at every stage of the process making giving us a huge advantage.
+        .process-graphic
+          .point
+            h4 Discovery
+            p This feature was first brought to my attention by a MX's customer support staff. I worked with them on an initial design and began showing to clients.
+          .point
+            h4 Interviews & focus groups
+            p Over several months I worked with MX clients to validate the design and better understand what features they needed in the user lookup tool. Design was iterated on several times during this phase.
+          .point
+            h4 Work with infosec
+            p This feature potentially exposes users banking data. We worked hard to make sure that personally identifiyable information was removed and all security concerns were resolved. 
+            br
+            p We even had to role out a new permissioning feature just before we were able to securely launch this feature. 
+      #next-project
+        #featured-work
+          h2 Next project
+          a(href="/kyper").work
+            .left
+              h3 Kyper Design System
+              span.sub-text Lead designer / iOS, Android, Web
+              p An accessible design system that empowers designers and developers to create amazing enterprise interfaces.
+              .view-project(href="/kyper") View project
+                img(alt="" src="/assets/icons/arrow-right-red.svg")
+            .right
+              .featured-img(style="background-image: url('/assets/home/desktop/kyper.png');")
+    include ../shared/footer.pug
+
+
+
+        
+    script(src='https://code.jquery.com/jquery-3.5.1.min.js', integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=', crossorigin='anonymous')
+    script(type='text/javascript', src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script(src="../js/desktop-slider.js")
+    script(src="../js/main.js")
