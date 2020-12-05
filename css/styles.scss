@@ -154,7 +154,7 @@ a{
   transition: $transition;
 }
 
-.page-wrapper {
+.page-wrapper, nav {
   max-width: 1700px;
   width: 100%;
   margin: 0 auto;
@@ -211,7 +211,7 @@ footer{
   height: 100%;
   width: 100%;
   background-color: $neutral-white;
-  // padding: 72px;
+  padding: 0 0 0 72px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -219,6 +219,7 @@ footer{
   padding-left: 72px;
   z-index: 2;
   top: -130%;
+  left: -24px;
   transition: $transition;
   @media (max-width: 800px) {
     padding-left: 24px;
