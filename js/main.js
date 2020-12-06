@@ -8,6 +8,14 @@ $('#close-menu').click(function(){
   $('#close-menu').removeClass('open')
 })
 
+$(document).keydown(function(e) {
+  // ESCAPE key pressed
+  if (e.keyCode == 27) {
+    $('#menu').removeClass('open')
+    $('#close-menu').removeClass('open')
+  }
+});
+
 $(document).ready(function(){
   $( "a.cta" ).click(function( event ) {
       event.preventDefault();
