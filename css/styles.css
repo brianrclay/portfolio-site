@@ -213,7 +213,7 @@ footer span {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #EEF1F6;
   padding: 0 0 0 72px;
   display: flex;
   align-items: flex-start;
@@ -227,12 +227,8 @@ footer span {
 }
 @media (max-width: 800px) {
   #menu {
-    padding-left: 24px;
-  }
-}
-@media (max-width: 500px) {
-  #menu {
-    padding-left: 0;
+    padding: 0 48px;
+    width: calc(100% + 48px);
   }
 }
 #menu.open {
