@@ -68,7 +68,7 @@ h1,
   font-size: 111px;
   line-height: 139px;
 
-  @media (max-width: 1700px){
+  @media (max-width: 1800px){
     font-size: 65px;
     line-height: 82px;
   }
@@ -88,7 +88,7 @@ h3,
   font-size: 65px;
   line-height: 82px;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     font-size: 36px;
     line-height: 40px;
   }
@@ -104,7 +104,7 @@ h4, .h4{
   line-height: 56px;
   font-weight: 800;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     font-size: 24px;
     line-height: 40px;
   }
@@ -125,7 +125,7 @@ p {
   font-size: 28px;
   line-height: 40px;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     font-size: 24px;
     line-height: 40px;
   }
@@ -159,7 +159,7 @@ a{
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     padding: 0 48px;
     max-width: 1485px;
   }
@@ -348,7 +348,7 @@ nav {
   justify-content: space-between;
   padding: 72px 0;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     padding-top: 48px;
   }
 
@@ -401,7 +401,7 @@ nav {
   justify-content: space-between;
   flex-direction: column;
   padding: 0 0 112px;
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     padding: 0 0 48px;
   }
 
@@ -409,7 +409,7 @@ nav {
     max-width: 942px;
     margin-bottom: 25vh;
 
-    @media (max-width: 1700px) {
+    @media (max-width: 1800px) {
       max-width: 450px;
     }
   }
@@ -422,7 +422,7 @@ nav {
     box-sizing: border-box;
     transition: $transition;
 
-    @media (max-width: 1700px) {
+    @media (max-width: 1800px) {
       max-width: 450px;
     }
 
@@ -461,7 +461,7 @@ nav {
       max-width: 700px;
       margin: 80px 32px 0 0;
 
-      @media (max-width: 1700px) {
+      @media (max-width: 1800px) {
         margin: 0 32px 0 0;
       }
       @media (max-width: 800px) {
@@ -534,7 +534,7 @@ nav {
         background-repeat: no-repeat;
         border-radius: 16px;
 
-        @media (max-width: 1700px) {
+        @media (max-width: 1800px) {
           width: 500px;
           height: 450px;
         }
@@ -728,14 +728,14 @@ nav {
 
   h2{
     margin-bottom: 96px;
-    @media (max-width: 1700px){
+    @media (max-width: 1800px){
       margin-bottom: 80px;
     }
   }
   .user{
     p{
       margin: 16px 0 104px;
-      @media (max-width: 1700px){
+      @media (max-width: 1800px){
         margin: 16px 0 80px;
       }
       @media (max-width: 800px){
