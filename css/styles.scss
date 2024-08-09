@@ -277,28 +277,28 @@ footer{
         line-height: 24px;
       }
 
-      &:hover, &:focus{
-        &:before{
-          height: 60%;
-          // bottom: 0;
-        }
-      }
+      // &:hover, &:focus{
+      //   &:before{
+      //     height: 60%;
+      //     // bottom: 0;
+      //   }
+      // }
 
-      &:before{
-        position: absolute;
-        transition: $transition;
-        width: 100%;
-        content: "";
-        bottom: 5px;
-        background-color: $light-red;
-        height: 8px;
-        z-index: -1;
-        opacity: 30%;
+      // &:before{
+      //   position: absolute;
+      //   transition: $transition;
+      //   width: 100%;
+      //   content: "";
+      //   bottom: 5px;
+      //   background-color: $light-red;
+      //   height: 8px;
+      //   z-index: -1;
+      //   opacity: 30%;
 
-        @media (max-width: 500px) {
-          height: 4px;
-        }
-      }
+      //   @media (max-width: 500px) {
+      //     height: 4px;
+      //   }
+      // }
     }
   }
 }
@@ -398,19 +398,40 @@ nav {
 #banner{
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 0 0 112px;
   @media (max-width: 1800px) {
     padding: 0 0 48px;
   }
 
+  .text-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
   h1{
     max-width: 1000px;
-    margin-bottom: 25vh;
+    margin-bottom: 48px;
+    font-size: 65px;
+    line-height: 82px;
 
-    @media (max-width: 1800px) {
-      max-width: 600px;
+    @media (max-width: 600px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  a{
+    font-size: 24px;
+    text-decoration: underline;
+    color: $red;
+    transition: $transition;
+
+    &:hover{
+      color: #000;
     }
   }
 
@@ -583,23 +604,23 @@ nav {
       margin: 0 0 24px 8px;
       display: inline-block;
 
-      &:hover, &:focus{
-        &:before{
-          height: 60%;
-        }
-      }
+      // &:hover, &:focus{
+      //   &:before{
+      //     height: 60%;
+      //   }
+      // }
 
-      &:before{
-        position: absolute;
-        transition: $transition;
-        width: 100%;
-        content: "";
-        bottom: 5px;
-        background-color: $light-red;
-        height: 8px;
-        z-index: -1;
-        opacity: 30%;
-      }
+      // &:before{
+      //   position: absolute;
+      //   transition: $transition;
+      //   width: 100%;
+      //   content: "";
+      //   bottom: 5px;
+      //   background-color: $light-red;
+      //   height: 8px;
+      //   z-index: -1;
+      //   opacity: 30%;
+      // }
     }
   }
 }
