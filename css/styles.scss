@@ -13,7 +13,7 @@ $easing: cubic-bezier(.475, .425, 0, .995);
 $side-padding: 64px;
 $tablet-side-padding: 32px;
 $mobile-side-padding: 24px;
-$max-width: 654px;
+$max-width: 750px;
 
 div,
 nav,
@@ -109,11 +109,18 @@ main{
   flex-direction: column;
   justify-content: space-between;
   background-color: transparent;
+  margin-left: 300px;
+
+  @media (max-width: 1000px) {
+    margin-left: 0;
+  }
 }
 
 .page-content{
   padding: 48px $side-padding 80px;
   background-color: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: 1200px) {
     padding: 48px $tablet-side-padding 80px;
@@ -134,6 +141,7 @@ main{
   justify-self: flex-start;
   width: 300px;
   height: 100vh;
+  position: fixed;
 
   @media (max-width: 1000px) {
     display: none;
@@ -380,8 +388,8 @@ footer{
 
   .work-links{
     display: flex;
-    align-items: flex-start;
     gap: 24px;
+    flex-direction: column;
 
     @media (max-width: 800px) {
       flex-direction: column;
@@ -465,3 +473,123 @@ footer{
   }
 }
 
+// ABOUT ME
+
+.about-me{
+  .banner{
+    img{
+      width: 100%;
+      display: block;
+      margin-bottom: 32px;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
+
+      &.mobile-hero{
+        display: none;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
+      }
+    }
+
+    h1{
+      margin-bottom: 32px;
+    }
+  }
+}
+
+// SUMMARY ROW
+
+.summary-wrapper{
+  display: flex;
+  flex-direction: column;
+  max-width: $max-width;
+  gap: 32px;
+
+  .summary-row{
+    display: flex;
+    gap: 32px;
+    
+
+    .col{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+
+      ul{
+        list-style: disc;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+// CASE STUDY
+
+.case-study{
+  .banner{
+    img{
+      width: 100%;
+      display: block;
+      margin-bottom: 48px;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
+
+      &.mobile-hero{
+        display: none;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
+      }
+    }
+
+    h1{
+      margin-bottom: 32px;
+      max-width: $max-width;
+    }
+  }
+
+  .summary-wrapper{
+    margin-bottom: 128px;
+  }
+
+  section{
+    margin: 120px 0;
+    h2{
+      max-width: $max-width;
+      margin-bottom: 24px;
+    }
+
+    p{
+      max-width: $max-width;
+    }
+    
+    img{
+      width: 100%;
+      margin: 48px 0 8px;
+      border-radius: 16px;
+      border: 1px solid #000000;
+    }
+
+    span{
+      padding: 0;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      display: block;
+      color: #757575;
+    }
+
+    ul{
+      list-style: disc;
+      margin-left: 16px;
+    }
+  }
+}
