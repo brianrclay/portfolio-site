@@ -576,6 +576,10 @@ footer{
       margin: 48px 0 8px;
       border-radius: 16px;
       border: 1px solid #000000;
+
+      @media (max-width: 800px) {
+        border-radius: 8px;
+      }
     }
 
     span{
