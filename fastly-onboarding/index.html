@@ -40,96 +40,84 @@
     <main class="case-study">
       <div class="page-content">
         <div class="banner">
-          <img src="../assets/Checkout.png">
-          <img src="../assets/Checkout mobile.png" class="mobile-hero">
+          <img src="../assets/Oboarding.png">
+          <img src="../assets/Oboarding mobile.png" class="mobile-hero">
           <h1>Increasing adoption through a simplified onboarding experience</h1>
         </div>
         <div class="summary-wrapper">
           <div class="summary-row">
             <div class="col">
               <h3>Team</h3>
-              <p>1 designer, 1 PM, 1 dev</p>
+              <p>2 designers, 1 PM, 2 devs</p>
             </div>
             <div class="col">
               <h3>Timeline</h3>
-              <p>2 months</p>
+              <p>1 month</p>
             </div>
           </div>
           <div class="summary-row">
             <div class="col">
               <h3>Summary</h3>
-              <p>Fastly had a checkout process that was cumbersome and error-prone. I created a new experience that led
-                to over 300 new paid accounts per month.</p>
+              <p>Fastly customers integrate with the CDN via a service. Two key steps to measure Fastly adoption are service creation and activation.<br><br>
+              This project simplified the service creation process leading to over 5,000 new services being activated every month. That’s an increase of 78% over the old model.</p>
             </div>
           </div>
         </div>
         <section>
-          <h2>Customers couldn’t complete the checkout process</h2>
-          <p>The checkout process was split between two pages. First, the user had to enter a tax address. Then they had
-            to navigate to an entirely different page and enter their payment details. Finally, after they saved their
-            details, they had to check a box to agree to terms and hit submit.<br><br>
-            This led to hundreds of customers with payment information on file but not being billed simply because they
-            never clicked submit.<br><br>
-            The checkout process also did not comply with legal requirements and could have landed Fastly in legal
-            trouble.</p>
-          <img src="../assets/Checkout/image 01.png" />
-          <span>Old checkout page</span>
+          <h2>Too many options led to few services being created</h2>
+          <p>Fastly services have hundreds of configuration options. When a new service was created they were dropped onto the service configuration page with little instructions for how to set things up.
+          This led to a service activation rate of around 39%. Fastly makes no money until a service is activated. Increasing activation rates is crucial to the business.</p>
+          <img src="../assets/Onboarding/image 01.png" />
+          <span>Old service creation page</span>
         </section>
         <section>
-          <h2>How we fixed the problems</h2>
-          <p>We combined the tax address form and the payment information form to make it easier for the user to upgrade
-            their account.<br><br>
-            Improving the form validation made it impossible for users to get stuck in the state where their information
-            was saved but was not being billed.<br><br>
-            We also worked with legal to ensure we were disclosing the correct information.</p>
-          <img src="../assets/Checkout/image 02.png" />
-          <span>New upgrade page - address step</span>
+          <h2>Focus the user on what is needed to do the job</h2>
+          <p>I designed a new service creation page that exposes the crucial settings for a service. The team also added sensible default settings, to get the service running optimally.<br><br>
+          Once the user has input their settings they can immediately activate the service.</p>
+          <img src="../assets/Onboarding/image 02.png" />
+          <span>New service creation page</span>
         </section>
         <section>
           <h2>Identifying the issue</h2>
-          <p>During an audit of our account pages, I identified the checkout pages as an opportuinty for improvement. I jumped into Pendo to look for some key metrics. I also asked for SQL reports from my backend engineers to be run for data that's not in Pendo. <br><br>
-          I found that 22% of customers failed to get through the upgrade process. I also found hundreds of customers who were stuck with payment information added but were not getting billed.</p>
-          <img src="../assets/Checkout/image 03.png" />
-          <span>New upgrade page - payment step</span>
+          <p>We had several “voice of the customer” tickets in the backlog referencing how difficult it is to configure a service.<br><br>
+          Out of the wide range of issues we found, the most common complaint was the service creation process.<br><br>
+          We interviewed as many of the customers as we could from the tickets to see how they create and activate services. This helped us ensure we understood their pain points before diving into a solution.</p>
+          <img src="../assets/Onboarding/image 03.png" />
+          <span>New home page with service creation CTA</span>
         </section>
         <section>
-          <h2>Competitive analysis</h2>
-          <p>Next, we looked to see what our competitors were doing. They all price and package their products
-            differently so the results were varied.<br><br>
-            However, we found a trend that most took a “Shopify-like” approach to the checkout process where you keep
-            the entire flow on one screen.</p>
-          <img src="../assets/Checkout/image 04.png" />
-          <span>Competitive analysis FigJam Board </span>
+          <h2>Align the team on how to solve the problem prior to designing</h2>
+          <p>I ran a workshop using the Big Idea Vignettes framework from IBM. Stakeholders from engineering, product management, and senior leadership participated.<br><br>
+          This helped us come up with ideas for how we might solve the issue and get aligned on what’s most important. We also took some time to sketch out what a solution might look like before getting into the design.</p>
+          <img src="../assets/Onboarding/image 04.png" />
+          <span>Big Idea Vignettes workshop board and sketches</span>
         </section>
         <section>
-          <h2>Designing, testing, and aligning with stakeholders</h2>
-          <p>The design was then tested internally with Fastly employees. We also leveraged usertesting.com and ran
-            unmoderated usability tests.<br><br>
-            Once people were able to find the upgrade page it was easy to complete the process. However, many users
-            struggled to find where they needed to go to upgrade.<br><br>
-            This was a key finding that informed future projects, but to keep the scope small, we decided to take that
-            problem on as a next step.</p>
-          <img src="../assets/Checkout/image 05.png" />
-          <span>Key checkout components</span>
+          <h2>Test assumptions with prototypes and research</h2>
+          <p>Based on the ideas from the workshop, I created an initial design and prototype. I took that prototype to customers and Fastly employees in 1-on-1 interviews.<br><br>
+          We found that the layout and workflow were good, but the language we used on the design was confusing and full of industry jargon.<br><br>
+          I worked with our writers to come up with language that is easier to understand.</p>
+          <img src="../assets/Onboarding/image 05.png" />
+          <span>New service creation form with recommended settings</span>
         </section>
         <section>
           <h2>Results</h2>
           <ul>
-            <li>Satisfied legal requirements</li>
-            <li>Currently produces over 300 new upgrades a month</li>
-            <li>Eliminated the possibility for users to have billing information on file but not be billed</li>
-            <li>Made the page mobile-friendly so you can complete checkout from any device</li>
+            <li>Increased service activation rate 78% YoY.</li>
+            <li>Used by over 15,000 users every month.</li>
+            <li>Over 4,500 new services are created every month using the new service creation page.</li>
+            <li>The new page is mobile-friendly and can be completed from any device. Previously it could only be completed on desktop.</li>
           </ul>
-          <img src="../assets/Checkout/image 06.png" />
-          <span>Billing information page after checkout is complete</span>
+          <img src="../assets/Onboarding/image 06.png" />
+          <span>Upcoming design that tests out a "wizard" type workflow</span>
         </section>
         <div class="my-work">
           <h2>More work</h2>
           <div class="work-links">
-            <a href="/fastly-onboarding" class="work">
-              <img src="/assets/My work 02.png" />
+            <a href="/fastly-checkout" class="work">
+              <img src="/assets/My work 01.png" />
               <div class="text-wrapper">
-                <p>A better onboarding increases completion of a key step in Fastly’s funnel by 78%.</p>
+                <p>Thousands of new customers annually with only 2 months of work.</p>
               </div>
             </a>
           </div>
