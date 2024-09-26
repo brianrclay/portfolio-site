@@ -14,7 +14,7 @@
   <link href="../assets/favicon.png" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;800&display=swap" rel="stylesheet">
   <link href="../css/reset.css" rel="stylesheet">
   <link href="../css/helpers.css" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
@@ -24,7 +24,7 @@
   <div class="page-wrapper">
     <nav class="desktop-nav">
       <a href="/" class="logo-link">
-        <img src="/assets/logo.svg" />
+        <img src="/assets/logo2.svg" />
       </a>
       <div class="nav-links">
         <a href="/" class="nav-link">Introduction</a>
@@ -42,13 +42,13 @@
         <div class="banner">
           <img src="../assets/Checkout.png">
           <img src="../assets/Checkout mobile.png" class="mobile-hero">
-          <h1>Helping hundreds of users upgrade to a paid account</h1>
+          <h1>Revamping Fastly's Upgrade Experience: 300+ New Customers Each Month</h1>
         </div>
         <div class="summary-wrapper">
           <div class="summary-row">
             <div class="col">
               <h3>Team</h3>
-              <p>1 designer, 1 PM, 1 dev</p>
+              <p>1 designer (myself), 3 developers, 1 PM</p>
             </div>
             <div class="col">
               <h3>Timeline</h3>
@@ -58,69 +58,99 @@
           <div class="summary-row">
             <div class="col">
               <h3>Summary</h3>
-              <p>Fastly's checkout process was cumbersome and error-prone. I created a new experience that led to over 300 new paid accounts per month.</p>
+              <p>Fastly’s upgrade experience was cumbersome, error-prone, and out of legal compliance, leaving hundreds of users stuck with payment information on file but not getting billed. My team and I redesigned and rebuilt the entire upgrade flow, simplifying it into a seamless, user-friendly process. As a result, Fastly gained over 300 new customers monthly, improved its conversion rate by 22%, and eliminated a major legal risk.</p>
             </div>
           </div>
         </div>
         <section>
-          <h2>Customers couldn’t complete the checkout process</h2>
-          <p>The checkout process was split between two pages. First, the user had to enter a tax address. Then they had
-            to navigate to an entirely different page and enter their payment details. Finally, after they saved their
-            details, they had to check a box to agree to terms and hit submit.<br><br>
-            This led to hundreds of customers with payment information on file but not being billed simply because they
-            never clicked submit.<br><br>
-            The checkout process also did not comply with legal requirements and could have landed Fastly in legal
-            trouble.</p>
+          <h2>Background</h2>
+          <p>Fastly’s upgrade process was a critical point for both user conversion and compliance. When I joined the team as a product designer, I was assigned to work on improving billing and growth-related workflows. Upon reviewing the upgrade experience, I immediately identified multiple friction points that were causing significant drop-offs and compliance risks.</p><br>
+          <h3>The problem</h3>
+          <p>The process required users to navigate between two separate pages: one for entering their tax address and another for payment information. Even worse, users could enter their payment details but fail to complete the upgrade because they didn’t accept the terms and conditions on the final screen. As a result, hundreds of users were in a “stuck” state—not upgraded but still thinking they had completed the process.</p><br>
+          <p>This convoluted experience not only led to user frustration but also failed to meet legal requirements, putting Fastly at risk.</p>
           <img src="../assets/Checkout/image 01.png" />
           <span>Old checkout page</span>
         </section>
         <section>
-          <h2>How we fixed the problems</h2>
-          <p>We combined the tax address form and the payment information form to make it easier for the user to upgrade
-            their account.<br><br>
-            Improving the form validation made it impossible for users to get stuck in the state where their information
-            was saved but was not being billed.<br><br>
-            We also worked with legal to ensure we were disclosing the correct information.</p>
+          <h2>Investigating the Issues</h2>
+          <p>I wanted to validate the extent of these problems, so I started by analyzing key metrics through Pendo. I focused on bounce rates, task completion rates, and time spent on each page. To get a complete picture, I also asked our back-end developers to pull data from the billing system, looking at how many users had entered their payment info but weren’t being billed.</p><br>
+          <h3>Here’s what we uncovered:</h3>
+          <ul>
+            <li>40% of users who entered their tax address never completed the payment step.</li>
+            <li>Hundreds of users had entered payment details but were stuck in an incomplete upgrade state.</li>
+            <li>Legal flagged the process as non-compliant, as it didn’t adequately disclose terms and conditions.</li>
+          </ul>
           <img src="../assets/Checkout/image 02.png" />
           <span>New upgrade page - address step</span>
         </section>
         <section>
-          <h2>Identifying the issue</h2>
-          <p>During an audit of our account pages, I identified the checkout pages as an opportunity for improvement. I jumped into Pendo to look for some key metrics. I also asked my backend engineers to run SQL reports for data that's not in Pendo. <br><br>
-          I found that 22% of customers failed to get through the upgrade process. I also found hundreds of customers who were stuck with payment information added but were not getting billed.</p>
+          <h2>Verifying Insights Through Usability Testing</h2>
+          <p>To further validate our findings, I set up an unmoderated usability test through UserTesting.com. I tasked participants with completing the old upgrade process using dummy accounts. In addition to testing the flow, I asked participants if they understood the terms of the subscription they were upgrading to.</p><br>
+          <h3>Usability test findings:</h3>
+          <ul>
+            <li>57% of participants completed the upgrade process.</li>
+            <li>Users took over a minute on average just to locate the upgrade page.</li>
+            <li>We witnessed participants falling into the same “stuck” state we had seen in our metrics.</li>
+          </ul>
+          <p>The test confirmed the need for a drastic redesign, particularly around unifying the upgrade steps and clarifying the terms and conditions.</p>
           <img src="../assets/Checkout/image 03.png" />
           <span>New upgrade page - payment step</span>
         </section>
         <section>
-          <h2>Competitive analysis</h2>
-          <p>Next, we looked to see what our competitors were doing. They all price and package their products
-            differently so the results were varied.<br><br>
-            However, we found a trend that most took a “Shopify-like” approach to the checkout process where you keep
-            the entire flow on one screen.</p>
+          <h2>Designing the Solution</h2>
+          <p>Armed with both quantitative data and usability insights, I started sketching potential solutions. I conducted a competitive analysis of upgrade experiences, looking at how other companies, including Shopify, designed their checkout flows.</p><br>
+          <h3>Key Design Decisions:</h3>
+          <ol>
+            <li><b>Unified Pages:</b> I merged the tax address and payment details forms into a single, streamlined page. This removed the need for users to navigate between two separate sections.</li>
+            <li><b>Shopify-Inspired Layout:</b> I adopted a layout similar to Shopify, placing the payment form on the left and a clear summary of the upgrade terms on the right. This not only made the process more intuitive but also ensured users saw all necessary information in one place.</li>
+            <li><b>Payment Management:</b> I added an improved post-upgrade experience for managing payment details, ensuring we maintained feature parity with the old system.</li>
+            <li><b>Legal Compliance:</b> I worked closely with our legal team to ensure the design met all compliance requirements, particularly around the clear disclosure of terms and conditions.</li>
+          </ol>
+          <p>I quickly prototyped the new flow in Figma and collaborated with developers to address technical constraints from Fastly’s outdated billing system, making adjustments where necessary.</p>
           <img src="../assets/Checkout/image 04.png" />
           <span>Competitive analysis FigJam Board </span>
         </section>
         <section>
-          <h2>Designing, testing, and aligning with stakeholders</h2>
-          <p>The design was then tested internally with Fastly employees. We also leveraged usertesting.com and ran
-            unmoderated usability tests.<br><br>
-            Once people were able to find the upgrade page it was easy to complete the process. However, many users
-            struggled to find where they needed to go to upgrade.<br><br>
-            This was a key finding that informed future projects, but to keep the scope small, we decided to take that
-            problem on as a next step.</p>
+          <h2>Testing the New Design</h2>
+          <p>Once the design was finalized, I ran another round of usability tests using a Figma prototype. This time, participants completed the process with significantly better results:</p><br>
+          <ul>
+            <li>100% of users completed the upgrade flow once they found the page.</li>
+            <li>Time on task decreased by 44%.</li>
+          </ul>
+          <p>However, users still had difficulty finding the upgrade page—a problem we decided to tackle separately, as it was outside the immediate scope of the project.</p>
+          <img src="../assets/Checkout/image 06.png" />
+          <span>Key checkout components</span>
+        </section>
+        <section>
+          <h2>Technical Challenges & Adjustments</h2>
+          <p>As we began building the new upgrade experience, several technical constraints emerged that required design adjustments:</p><br>
+          <ul>
+            <li><b>Outdated billing system limitations:</b> The system couldn’t distinguish between a new upgrade and a user editing their payment details. This meant we had to use the same success message for both scenarios. I worked closely with our content team to craft messaging that would be clear and applicable in both contexts, minimizing confusion.</li>
+            <li><b>Address formatting requirement:</b> Our billing system required a very specific format for billing addresses. If a user’s entered address didn’t match the required format, the system would generate a suggested version. To handle this, I designed a modal that presented the suggested address to the user, giving them the option to either accept the system’s suggestion or stick with their original input. This solution ensured smooth processing while maintaining user control.</li>
+            <li><b>Legal compliance:</b> We also had to satisfy legal requirements regarding the display of terms and conditions during the upgrade process. After some iterations, I adjusted the layout and copy based on feedback from the legal team, ensuring the design met all necessary compliance standards.</li>
+          </ul>
+          <p>By addressing these technical and legal challenges, we were able to deliver a seamless upgrade experience that worked within system limitations while keeping the user in control.</p>
           <img src="../assets/Checkout/image 05.png" />
           <span>Key checkout components</span>
         </section>
         <section>
-          <h2>Results</h2>
+          <h2>Results and Key Learnings</h2>
+          <p>The new upgrade experience has been live for six months, and the results speak for themselves:</p><br>
           <ul>
-            <li>Satisfied legal requirements</li>
-            <li>Currently produces over 300 new upgrades a month</li>
-            <li>Eliminated the possibility for users to have billing information on file but not be billed</li>
-            <li>Made the page mobile-friendly so you can complete checkout from any device</li>
+            <li>300+ new upgrades per month.</li>
+            <li>Conversion rate increased by 22%.</li>
+            <li>The “stuck” state was eliminated, ensuring all users who enter payment information now complete the process.</li>
+            <li>Mobile-friendly design, enabling users to upgrade seamlessly from any device.</li>
+            <li>Satisfied legal requirements, bringing Fastly’s upgrade flow into compliance.</li>
+          </ul><br>
+          <h3>Lessons Learned</h3>
+          <ul>
+            <li><b>Iterative Testing is Key:</b> Usability testing at both the problem-identification and solution-validation stages was crucial in refining the design.</li>
+            <li><b>Collaboration Across Teams:</b> Working closely with legal, engineering, and writing teams helped us navigate technical and legal constraints while maintaining a user-centered design approach.</li>
+            <li><b>Scope Management:</b> While we identified additional pain points (like finding the upgrade page), focusing on the core upgrade flow allowed us to deliver impactful results within a tight timeline.</li>
           </ul>
-          <img src="../assets/Checkout/image 06.png" />
-          <span>Billing information page after checkout is complete</span>
+          <img src="../assets/Checkout/image 07.png" />
+          <span>Mobile upgrade page</span>
         </section>
         <div class="my-work">
           <h2>More work</h2>
