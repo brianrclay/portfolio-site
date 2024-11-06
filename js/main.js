@@ -17,3 +17,29 @@ $('.dd-scrim').click(function(){
 
   $('.my-work-dd-toggle').focus();
 })
+
+var pw = "bclaydesign"
+
+$('.pw-submit').click(function(){
+  
+  if ($('#password').val() == pw) {
+    $('.checkout-link').show();
+    $('.pw-form').remove();
+  } else{
+    $('.error').show()
+  }
+})
+
+$('textarea').keyup(function(e){
+  alert('hi')
+  if ($('#password').val() == pw) {
+    $('.checkout-link').show();
+    $('.pw-form').remove();
+  } else{
+    $('.error').show()
+  }
+});
+
+$('form').submit(function () {
+  return false;
+ });
