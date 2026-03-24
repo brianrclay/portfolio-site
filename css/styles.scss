@@ -626,6 +626,72 @@ footer{
   }
 }
 
+// LIGHTBOX
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+  cursor: zoom-out;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    object-fit: contain;
+    transform: scale(0.92);
+    transition: $transition;
+    cursor: default;
+  }
+
+  &.open img {
+    transform: scale(1);
+  }
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $transition;
+  z-index: 1001;
+
+  &:hover, &:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.case-study section img {
+  cursor: zoom-in;
+}
+
 // PASSWORD
 
 .password{
