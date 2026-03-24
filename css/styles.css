@@ -360,7 +360,6 @@ footer p {
   overflow: visible;
 }
 .my-work .work-links .work:hover, .my-work .work-links .work:focus {
-  transform: translateX(8px) translateY(-8px);
   outline: #fff 3px;
 }
 .my-work .work-links .work:hover:after, .my-work .work-links .work:focus:after {
@@ -705,6 +704,52 @@ footer p {
   margin-bottom: 24px;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* PAGE TRANSITIONS */
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pageExit {
+  to { opacity: 0; transform: translateY(-8px); }
+}
+body {
+  animation: pageEnter 450ms cubic-bezier(0.475, 0.425, 0, 0.995) both;
+}
+body.page-exit {
+  animation: pageExit 320ms cubic-bezier(0.475, 0.425, 0, 0.995) both;
+  pointer-events: none;
+}
+
+/* HERO STAGGER — homepage */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.home .banner > *:nth-child(1) { animation: fadeUp 650ms cubic-bezier(0.475, 0.425, 0, 0.995) 200ms both; }
+.home .banner > *:nth-child(2) { animation: fadeUp 650ms cubic-bezier(0.475, 0.425, 0, 0.995) 330ms both; }
+.home .banner > *:nth-child(3) { animation: fadeUp 650ms cubic-bezier(0.475, 0.425, 0, 0.995) 460ms both; }
+.home .banner > *:nth-child(4) { animation: fadeUp 650ms cubic-bezier(0.475, 0.425, 0, 0.995) 580ms both; }
+.home .my-work                 { animation: fadeUp 650ms cubic-bezier(0.475, 0.425, 0, 0.995) 750ms both; }
+
+/* SCROLL ANIMATIONS — case studies */
+.case-study .summary-wrapper,
+.case-study section {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 700ms cubic-bezier(0.475, 0.425, 0, 0.995),
+              transform 700ms cubic-bezier(0.475, 0.425, 0, 0.995);
+}
+.case-study .summary-wrapper.in-view,
+.case-study section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* WORK CARD 3D — JS drives the transform, remove CSS hover translate */
+.my-work .work-links .work {
+  will-change: transform;
 }
 
 /* LIGHTBOX */

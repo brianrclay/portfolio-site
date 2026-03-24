@@ -412,7 +412,6 @@ footer{
       overflow: visible;
 
       &:hover, &:focus {
-        transform: translateX(8px) translateY(-8px);
         outline: #fff 3px;
         &:after{
           transform: translateX(-16px) translateY(16px);
@@ -624,6 +623,63 @@ footer{
       }
     }
   }
+}
+
+// PAGE TRANSITIONS
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pageExit {
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+body {
+  animation: pageEnter 450ms $easing both;
+}
+body.page-exit {
+  animation: pageExit 320ms $easing both;
+  pointer-events: none;
+}
+
+// HERO STAGGER
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.home{
+  .banner{
+    > *:nth-child(1) { animation: fadeUp 650ms $easing 200ms both; }
+    > *:nth-child(2) { animation: fadeUp 650ms $easing 330ms both; }
+    > *:nth-child(3) { animation: fadeUp 650ms $easing 460ms both; }
+    > *:nth-child(4) { animation: fadeUp 650ms $easing 580ms both; }
+  }
+  .my-work { animation: fadeUp 650ms $easing 750ms both; }
+}
+
+// SCROLL ANIMATIONS
+
+.case-study{
+  .summary-wrapper,
+  section{
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 700ms $easing, transform 700ms $easing;
+
+    &.in-view{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// WORK CARD 3D
+
+.my-work .work-links .work {
+  will-change: transform;
 }
 
 // LIGHTBOX
