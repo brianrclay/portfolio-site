@@ -1,5 +1,6 @@
 // Colors
 $gray: #8C8C8C;
+$accent: #34D399; // mint green — 8.8:1 on dark nav, 6.9:1 for dark text on hover
 
 // Shadow
 $shadow-soft: 0px 2.56px 15.36px rgba(0, 0, 0, 0.11);
@@ -92,7 +93,8 @@ button{
   border-radius: 8px;
 
   &:hover, &:focus{
-    background-color: #B2B2B2;
+    background-color: $accent;
+    color: #0D2818;
   }
 }
 
@@ -181,15 +183,15 @@ main{
     }
 
     &.active-parent{
-      color: #ffffff;
+      color: $accent;
     }
-  
+
     &.active{
-      color: #ffffff;
-  
+      color: $accent;
+
       &::after{
         content: "";
-        background-color: #ffffff;
+        background-color: $accent;
         width: 16px;
         height: 2px;
         position: absolute;
@@ -259,11 +261,11 @@ main{
     }
 
     &.active-parent{
-      color: #ffffff;
+      color: $accent;
     }
-  
+
     &.active{
-      color: #ffffff;
+      color: $accent;
     }
 
     &.my-work-dd-toggle{
@@ -326,11 +328,11 @@ main{
     }
 
     &.active-parent{
-      color: #ffffff;
+      color: $accent;
     }
-  
+
     &.active{
-      color: #ffffff;
+      color: $accent;
     }
   }
 }

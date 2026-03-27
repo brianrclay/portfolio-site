@@ -74,7 +74,8 @@ button {
   border-radius: 8px;
 }
 .btn:hover, .btn:focus {
-  background-color: #B2B2B2;
+  background-color: #34D399;
+  color: #0D2818;
 }
 
 .page-wrapper {
@@ -159,14 +160,14 @@ main {
   text-decoration: underline;
 }
 .desktop-nav .nav-link.active-parent {
-  color: #ffffff;
+  color: #34D399;
 }
 .desktop-nav .nav-link.active {
-  color: #ffffff;
+  color: #34D399;
 }
 .desktop-nav .nav-link.active::after {
   content: "";
-  background-color: #ffffff;
+  background-color: #34D399;
   width: 16px;
   height: 2px;
   position: absolute;
@@ -227,10 +228,10 @@ main {
   text-decoration: underline;
 }
 .mobile-nav .nav-link.active-parent {
-  color: #ffffff;
+  color: #34D399;
 }
 .mobile-nav .nav-link.active {
-  color: #ffffff;
+  color: #34D399;
 }
 .mobile-nav .nav-link.my-work-dd-toggle.open svg {
   transform: rotate(180deg);
@@ -281,10 +282,10 @@ main {
   text-decoration: underline;
 }
 .my-work-dd .nav-link.active-parent {
-  color: #ffffff;
+  color: #34D399;
 }
 .my-work-dd .nav-link.active {
-  color: #ffffff;
+  color: #34D399;
 }
 
 .dd-scrim {
